@@ -1,1 +1,3 @@
-SELECT ad, soyad, maas FROM calisanlar WHERE calisan_birim_id = 1 OR calisan_birim_id = 2;
+SELECT ad, soyad, maas FROM calisanlar
+INNER JOIN birimler ON calisan_birim_id = birim_id
+WHERE birim_ad = 'Yazılım' OR birim_ad = 'Donanım';
